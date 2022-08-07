@@ -15,7 +15,6 @@ app.use(express.json());
 app.use(router);
 
 
-
 app.listen(port, async () => {
     log.info(`Server is running at http://localhost:${port}`);
 
