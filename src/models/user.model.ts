@@ -11,7 +11,7 @@ import log from '../utils/logger';
     const hash = await argon2.hash(this.password);
     this.password = hash
 
-    return 
+    return;
 })
 
 @modelOptions({
