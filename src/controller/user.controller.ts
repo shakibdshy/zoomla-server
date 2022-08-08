@@ -102,3 +102,7 @@ export async function resetPasswordHandler(req: Request<ResetPasswordInput['para
 
     return res.send('Password Successfully Reset')
 }
+
+export async function getCurrentUserHandler(req: Request, res: Response) {
+    return res.send(res.send(req.locals.user))
+}
