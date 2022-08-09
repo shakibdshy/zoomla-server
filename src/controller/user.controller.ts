@@ -104,5 +104,5 @@ export async function resetPasswordHandler(req: Request<ResetPasswordInput['para
 }
 
 export async function getCurrentUserHandler(req: Request, res: Response) {
-    return res.send(res.send(req.locals.user))
+    return res.send(res.send(res.locals.user))
 }
