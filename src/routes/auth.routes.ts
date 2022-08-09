@@ -3,6 +3,7 @@ import {
     createSessionHandler,
     refreshAccessTokenHandler,
 } from "../controller/auth.controller";
+import requiredUser from "../middleware/requerUser";
 import validateResource from "../middleware/validateResource";
 import { createSessionSchema } from "../schema/auth.schema";
 
@@ -14,6 +15,6 @@ router.post(
     createSessionHandler
 );
 
-router.post("/api/sessions/refresh", refreshAccessTokenHandler);
+router.post("/api/sessions/refresh", requiredUser, refreshAccessTokenHandler);
 
 export default router;

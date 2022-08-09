@@ -11,8 +11,8 @@ export class Session {
 
 const SessionModel = getModelForClass(Session, {
     schemaOptions: {
-        timestamps: true
-    }
-})
+        timestamps: true,
+    },
+});
 
 export default SessionModel;

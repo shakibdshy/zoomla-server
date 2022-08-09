@@ -41,6 +41,7 @@ export async function createSessionHandler(
     const refreshToken = await signRefreshToken({ userId: user._id });
 
     // send the tokens
+
     return res.send({
         accessToken,
         refreshToken,

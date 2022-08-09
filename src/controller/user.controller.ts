@@ -76,7 +76,7 @@ export async function forgotPasswordHandler(req: Request<{}, {}, ForgotPasswordI
     // Send email with reset code
     await sendEmail({
         to: user.email,
-        from: "shakibdshy@outlook.com",
+        from: "test@email.com",
         subject: "Reset your password",
         text: `Reset code: ${passwordResetCode}. Id: ${user._id}`,
     })
